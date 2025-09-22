@@ -1,0 +1,37 @@
+---
+import TheFooter from "@/components/TheFooter.astro";
+import TheHeader from "@/components/TheHeader.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+
+<html lang="en" class="lenis lenis-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title} | Kersjes.dev</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="robots" content="index, follow" />
+    <script>
+      import Lenis from "lenis";
+      new Lenis({ autoRaf: true });
+    </script>
+  </head>
+  <body>
+    <TheHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <TheFooter />
+  </body>
+</html>
