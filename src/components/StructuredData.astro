@@ -1,0 +1,10 @@
+---
+// https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+interface Props {
+  schema: Readonly<Record<string, unknown>>;
+}
+const { schema } = Astro.props;
+const jsonLd = JSON.stringify(schema);
+---
+
+<script is:inline type="application/ld+json" set:html={jsonLd} />

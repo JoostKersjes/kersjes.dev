@@ -1,0 +1,46 @@
+---
+import StructuredData from "@/components/StructuredData.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { ComponentProps } from "astro/types";
+
+interface Props extends ComponentProps<typeof BaseLayout> {}
+const { ...baseLayoutProps } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const me = {
+  "@type": "Person",
+  name: "Joost Kersjes",
+  image: `${canonicalURL}/web-app-manifest-512x512.png`,
+} as const;
+
+/**
+ * @link https://developers.google.com/search/docs/appearance/site-names
+ */
+const siteName = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Joost Kersjes",
+  url: Astro.site?.toString(),
+  author: me,
+} as const;
+
+/**
+ * @link https://developers.google.com/search/docs/appearance/structured-data/profile-page
+ */
+const profilePage = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  dateCreated: "2025-10-09T12:34:00+02:00", // TODO
+  // dateModified: "2025-10-09T14:53:00+02:00",
+  mainEntity: me,
+} as const;
+---
+
+<BaseLayout {...baseLayoutProps}>
+  <Fragment slot="head">
+    <StructuredData schema={siteName} />
+    <StructuredData schema={profilePage} />
+  </Fragment>
+  <slot />
+</BaseLayout>

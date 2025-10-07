@@ -1,0 +1,55 @@
+---
+import StructuredData from "@/components/StructuredData.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { ComponentProps } from "astro/types";
+
+interface Props extends ComponentProps<typeof BaseLayout> {
+  recipe: {
+    image: string[];
+    description?: string;
+    datePublished?: string;
+    recipeCategory?: string;
+    recipeCuisine?: string;
+    prepTime?: string;
+    cookTime?: string;
+    totalTime?: string;
+    keywords?: string;
+    recipeIngredient?: string[];
+    recipeInstructions?: {
+      text: string;
+      name?: string;
+      url?: string;
+      image?: string;
+    }[];
+  };
+}
+const { recipe, ...baseLayoutProps } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+/**
+ * @link https://developers.google.com/search/docs/appearance/structured-data/recipe
+ */
+const recipeData = {
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  name: baseLayoutProps?.title,
+  author: {
+    "@type": "Person",
+    name: "Joost Kersjes",
+    image: `${canonicalURL}/web-app-manifest-512x512.png`,
+  },
+  ...recipe,
+  recipeInstructions: recipe.recipeInstructions?.map((step) => ({
+    ...step,
+    "@type": "HowToStep",
+  })),
+};
+---
+
+<BaseLayout {...baseLayoutProps}>
+  <Fragment slot="head">
+    <StructuredData schema={recipeData} />
+  </Fragment>
+  <slot />
+</BaseLayout>

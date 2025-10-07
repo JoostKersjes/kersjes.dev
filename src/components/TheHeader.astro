@@ -1,5 +1,24 @@
 ---
-
+import { Image } from "astro:assets";
+import avatar from "@/images/avatar037.png";
 ---
 
-<header></header>
+<header>
+  <nav>
+    <a href="/" aria-label="Home">
+      <Image
+        src={avatar}
+        alt="Picture of a red racecar called 'il monster' from the game 'art of rally'"
+        width={32}
+        height={32}
+        densities={[1.5, 2, 3]}
+        priority
+      />
+    </a>
+    <ul>
+      <li>
+        <a href="/pizza/">Pizza recipe</a>
+      </li>
+    </ul>
+  </nav>
+</header>

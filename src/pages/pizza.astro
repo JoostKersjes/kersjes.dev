@@ -1,12 +1,17 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
+import RecipeLayout from "@/layouts/RecipeLayout.astro";
+
+const recipe = {
+  image: [], // TODO
+};
 ---
 
-<BaseLayout
-  title="Pizza recipe"
+<RecipeLayout
+  title="Homemade pizza"
   description="Joost's recipe to make pizzas from scratch"
+  recipe={recipe}
 >
-  <h1>Pizza recipe</h1>
+  <h1>Homemade pizza</h1>
   <section>
     <h2>Dough</h2>
     <p>🏗️ Coming soon...</p>
@@ -19,4 +24,4 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <h2>Baking</h2>
     <p>🏗️ Coming soon...</p>
   </section>
-</BaseLayout>
+</RecipeLayout>
