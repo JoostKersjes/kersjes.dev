@@ -8,5 +8,10 @@
     "source.fixAll": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "editor.wrappingStrategy": "advanced",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

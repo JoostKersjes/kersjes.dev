@@ -1,4 +1,5 @@
 ---
+import RichText from "@/components/RichText.astro";
 import RecipeLayout from "@/layouts/RecipeLayout.astro";
 
 const recipe = {
@@ -11,17 +12,19 @@ const recipe = {
   description="Joost's recipe to make pizzas from scratch"
   recipe={recipe}
 >
-  <h1>Homemade pizza</h1>
-  <section>
-    <h2>Dough</h2>
-    <p>🏗️ Coming soon...</p>
-  </section>
-  <section>
-    <h2>Sauce</h2>
-    <p>🏗️ Coming soon...</p>
-  </section>
-  <section>
-    <h2>Baking</h2>
-    <p>🏗️ Coming soon...</p>
-  </section>
+  <RichText>
+    <h1>Homemade pizza</h1>
+    <section>
+      <h2>Dough</h2>
+      <p>🏗️ Coming soon...</p>
+    </section>
+    <section>
+      <h2>Sauce</h2>
+      <p>🏗️ Coming soon...</p>
+    </section>
+    <section>
+      <h2>Baking</h2>
+      <p>🏗️ Coming soon...</p>
+    </section>
+  </RichText>
 </RecipeLayout>

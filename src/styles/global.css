@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-gray-50: #f5f6f6;
+  --color-gray-100: #e5e8e8;
+  --color-gray-200: #cfd2d1;
+  --color-gray-300: #adb3b1;
+  --color-gray-400: #838d8c;
+  --color-gray-500: #687271;
+  --color-gray-600: #596161;
+  --color-gray-700: #4c5251;
+  --color-gray-800: #434747;
+  --color-gray-900: #3b3e3e;
+  --color-gray-950: #1b1d1d;
+  --color-pink-50: #faf5f7;
+  --color-pink-100: #f6edf1;
+  --color-pink-200: #eddde4;
+  --color-pink-300: #e0c1cf;
+  --color-pink-400: #cc9aaf;
+  --color-pink-500: #b5728c;
+  --color-pink-600: #a45e76;
+  --color-pink-700: #8b4b5f;
+  --color-pink-800: #74404f;
+  --color-pink-900: #623945;
+  --color-pink-950: #3a1d26;
+  --color-cyan-50: #eefdfc;
+  --color-cyan-100: #d4f9f8;
+  --color-cyan-200: #aff2f2;
+  --color-cyan-300: #77e8e9;
+  --color-cyan-400: #48d7da;
+  --color-cyan-500: #1db8bd;
+  --color-cyan-600: #1b949f;
+  --color-cyan-700: #1d7781;
+  --color-cyan-800: #20606a;
+  --color-cyan-900: #1f515a;
+  --color-cyan-950: #0f353d;
+}
+
+@utility prose {
+  --tw-prose-invert-body: var(--color-gray-200);
+  --tw-prose-invert-headings: var(--color-gray-100);
+}
+
+@layer base {
+  * {
+    @apply ring-pink-500/80;
+  }
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}

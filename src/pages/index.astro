@@ -1,7 +1,156 @@
 ---
+import RichText from "@/components/RichText.astro";
 import HomePageLayout from "@/layouts/HomePageLayout.astro";
 ---
 
 <HomePageLayout description="">
-  <h1>Joost Kersjes</h1>
+  <RichText>
+    <h1>Joost Kersjes</h1>
+    <p>
+      Hi! I&apos;m Joost Kersjes, currently working at <a
+        href="https://awareways.com/en/"
+        target="_blank">Awareways</a
+      > as the Frontend Lead.
+    </p>
+    <p>
+      Professionally, I aim to build spotless user experiences. Here are some of
+      the tools, languages and frameworks I love working with:<ul>
+        <li>
+          <a href="https://www.typescriptlang.org/" target="_blank"
+            >TypeScript</a
+          >
+        </li>
+        <li><a href="https://vuejs.org/" target="_blank">Vue.js</a></li>
+        <li>
+          <a href="https://tanstack.com/query/latest" target="_blank"
+            >TanStack Query</a
+          >
+        </li>
+        <li><a href="https://astro.build/" target="_blank">Astro</a></li>
+        <li><a href="https://prettier.io/" target="_blank">Prettier</a></li>
+      </ul>
+    </p>
+
+    <section aria-labelledby="interests">
+      <h2 id="interests">
+        <a href="#interests">My interests</a>
+      </h2>
+      <ul>
+        <li>
+          PC gaming, lots of games, to name a few:<ul>
+            <li>
+              Most often <a
+                href="https://worldofwarcraft.blizzard.com/en-us/"
+                target="_blank">World of Warcarft</a
+              >
+            </li>
+            <li>
+              My all-time favourite game is <a
+                href="https://www.artofrally.com/"
+                target="_blank">art of rally</a
+              >
+            </li>
+            <li>
+              Competitive games with friends e.g. <a
+                href="https://www.marvelrivals.com/">Marvel Rivals</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>I watch every Formula 1 race (go Verstappen! go Williams!)</li>
+        <li>
+          Watching my friends stream games (<a
+            href="https://www.twitch.tv/obsessedcommunity"
+            target="_blank">their Twitch channel</a
+          >)
+        </li>
+        <li>
+          Making pizza (<a href="/pizza/">try my recipe</a>)
+        </li>
+        <li>League of Legends Esports (go G2!)</li>
+        <li>
+          Building LEGO Technic cars:<ul>
+            <li>
+              <a
+                href="https://www.lego.com/en-nl/product/mclaren-formula-1-race-car-42141#pdp-features-accordion-title"
+                >McLaren Formula 1&trade;</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.lego.com/en-nl/product/lamborghini-sian-fkp-37-42115#pdp-features-accordion-title"
+                >Lamborghini Sián</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="career">
+      <h2 id="career">
+        <a href="#career">My career so far</a>
+      </h2>
+
+      <h3>Awareways / 2021 - present</h3>
+      <p>
+        I joined Awareways at the very start of development for the <a
+          href="https://awareways.com/en/wave/"
+          target="_blank">Wave</a
+        >
+        learning platform which we ended up launching in 2022. As a fun side-project,
+        I also got to host the <a
+          href="https://connect.awareways.com/en/awarecast"
+          target="_blank">Awarecast</a
+        > podcast.
+      </p>
+      <p>
+        While being mentored by <a
+          href="https://www.linkedin.com/in/miguel-angelo-bento/"
+          target="_blank">Miguel Bento</a
+        >, which I'm very thankful for, I got to develop my skills in Vue.js,
+        TypeScript, Cypress, Storybook, WCAG, Sass and Docker. It grew me in to
+        a knowledgeble and well-rounded expert.
+      </p>
+      <p>
+        After Awareways parted ways with Miguel in 2024, I took up the role of
+        Frontend Lead, eventually hiring <a
+          href="https://www.linkedin.com/in/claudiapereiraoliveira/"
+          target="_blank">Cláudia Oliveira</a
+        > to help contribute to our frontend projects. While building our new <a
+          href="https://awareways.com/en/"
+          target="_blank">Awareways website</a
+        > in 2025 I grew fond of working with Astro.
+      </p>
+      <p>
+        I'm still working to improve my soft skills as a leader and a coach, but
+        it is very motivating to have more responsibilities and I'm very excited
+        for what the future holds for me at Awareways!
+      </p>
+
+      <h3>
+        Spotler (<abbr title="formerly known as">f.k.a.</abbr> Webpower) / 2019 -
+        2021
+      </h3>
+      <p>
+        During my software development college education I had two internships
+        with Webpower. I started working there part-time in 2019 and then
+        full-time after I graduated in 2020.
+      </p>
+      <p>
+        At Webpower I discovered my passion for frontend development and learned
+        what it takes to build high-quality user experiences. My work mainly
+        involved writing custom PHP scripts to process data, but working on the
+        'flow builder' frontend application with React (JS) was what I enjoyed
+        the most.
+      </p>
+      <p>
+        After Webpower was aquired by Spotler Group in 2021, our team went
+        through restructuring which made me think about my professional future.
+        I started looking for a company that aligned with my values and would
+        give me an opportunity to develop my frontend development expertise
+        further. I found that at Awareways.
+      </p>
+    </section>
+  </RichText>
 </HomePageLayout>

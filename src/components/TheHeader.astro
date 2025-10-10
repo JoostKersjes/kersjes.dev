@@ -1,12 +1,21 @@
 ---
 import { Image } from "astro:assets";
 import avatar from "@/images/avatar037.png";
+import GitHubCat from "@/components/svg/GitHubCat.vue";
+import LinkedInSquare from "./svg/LinkedInSquare.vue";
 ---
 
-<header>
-  <nav>
-    <a href="/" aria-label="Home">
+<header
+  class="sticky top-0 mx-auto mb-2 w-full max-w-160 bg-gray-950/50 px-6 py-4 font-semibold text-white backdrop-blur-sm"
+>
+  <nav class="flex items-center justify-between gap-10">
+    <a
+      class="group flex items-center gap-3 rounded-full bg-gray-950/80 pr-4"
+      href="/"
+      aria-label="Home"
+    >
       <Image
+        class="rounded-full bg-pink-500 text-transparent"
         src={avatar}
         alt="Picture of a red racecar called 'il monster' from the game 'art of rally'"
         width={32}
@@ -14,10 +23,39 @@ import avatar from "@/images/avatar037.png";
         densities={[1.5, 2, 3]}
         priority
       />
+      <span
+        class="text-lg text-pink-300 group-hover:underline group-active:underline"
+        >Home</span
+      >
     </a>
-    <ul>
+    <ul class="flex list-none gap-4">
       <li>
-        <a href="/pizza/">Pizza recipe</a>
+        <a
+          class="flex min-h-6 items-center gap-2 hover:underline active:underline"
+          href="https://www.linkedin.com/in/joost-kersjes/"
+          target="_blank"
+          ><LinkedInSquare
+            class="size-4.5 fill-white"
+            aria-hidden="true"
+          /><span class="sr-only sm:not-sr-only">LinkedIn</span></a
+        >
+      </li>
+      <li>
+        <a
+          class="flex min-h-6 items-center gap-2 hover:underline active:underline"
+          href="https://github.com/JoostKersjes"
+          target="_blank"
+          ><GitHubCat class="size-4.5 fill-white" aria-hidden="true" /><span
+            class="sr-only sm:not-sr-only">GitHub</span
+          ></a
+        >
+      </li>
+      <li>
+        <a class="group flex gap-2 text-pink-300 sm:ml-2" href="/pizza/"
+          ><span role="img" aria-label="Pizza">🍕</span><span
+            class="group-hover:underline group-active:underline">Recipe</span
+          ></a
+        >
       </li>
     </ul>
   </nav>
