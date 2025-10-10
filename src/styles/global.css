@@ -40,6 +40,9 @@
 @utility prose {
   --tw-prose-invert-body: var(--color-gray-200);
   --tw-prose-invert-headings: var(--color-gray-100);
+  --tw-prose-invert-bullets: var(--color-gray-400);
+  --tw-prose-invert-counters: var(--color-gray-400);
+  --tw-prose-invert-hr: var(--color-gray-800);
 }
 
 @layer base {

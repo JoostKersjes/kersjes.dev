@@ -29,7 +29,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
     <script>
       import Lenis from "lenis";
-      new Lenis({ autoRaf: true, anchors: true });
+      new Lenis({ autoRaf: true, anchors: { offset: -72 } });
     </script>
     <slot name="head" />
   </head>

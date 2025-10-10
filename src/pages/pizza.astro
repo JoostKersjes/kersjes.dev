@@ -9,21 +9,150 @@ const recipe = {
 
 <RecipeLayout
   title="Homemade pizza"
-  description="Joost's recipe to make pizzas from scratch"
+  description="Joost's recipe to make pizzas from scratch, including the dough, sauce and how to bake them."
   recipe={recipe}
 >
   <RichText>
     <h1>Homemade pizza</h1>
-    <section>
-      <h2>Dough</h2>
-      <p>🏗️ Coming soon...</p>
+
+    <section aria-labelledby="dough">
+      <h2 id="dough">
+        <a href="#dough">Dough</a>
+      </h2>
+      <p>Delicious and fluffy! Makes 4 large or 6 small pizzas.</p>
+      <p>Make this at least 1 day beforehand.</p>
+
+      <h3>Tools</h3>
+      <ul>
+        <li>Large bowl (preferably non-stick)</li>
+        <li>Oven with a manual light</li>
+        <li>
+          4 wide containers with lids, minimum 500 mL volume<br />(preferably
+          round and freezer-proof. I use Hertog icecream tubs)
+        </li>
+        <li>Enough space in your fridge for all the containers</li>
+        <li>Scale for measuring</li>
+      </ul>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li>
+          600 grams wheat flour + extra for your work surface (1 kg to be safe)
+        </li>
+        <li>400 millilitres lukewarm tap water (make sure to measure!)</li>
+        <li>7 grams dry instant yeast (or preferably 21 g fresh yeast)</li>
+        <li>4 teaspoons olive oil + extra</li>
+        <li>2 teaspoons granulated sugar</li>
+        <li>2 teaspoons salt</li>
+      </ul>
+
+      <h3>Steps</h3>
+      <ol>
+        <li>
+          Clean the work surface you are kneading the dough on with dishsoap.
+        </li>
+        <li>
+          While your work surface dries, pour the 400 mL water into the bowl.
+        </li>
+        <li>
+          Add the sugar and then mix in the yeast with your hand until it is
+          fully dissolved. (FYI you don't need to "bloom" yeast sold in Dutch
+          supermarkets)
+        </li>
+        <li>Now add the 600 g flour, salt and oil in that order.</li>
+        <li>
+          To prepare for step 7, lightly dust your work surface with flour and
+          keep the extra flour closeby.
+        </li>
+        <li>
+          Mix everything with your hands until a shaggy dough ball forms and
+          your bowl is clean.
+        </li>
+        <li>
+          Transfer the dough ball onto your work surface and start kneading it.
+          If after 3 minutes it still so sticky that it leaves chunks of dough
+          on your hands, then add more flour. Dust your work surface again.
+        </li>
+        <li>
+          Knead the dough for at least 10 minutes. Use some power, but avoid
+          tearing the dough or breaking the gluten bonds. A 'strech & fold'
+          approach is what I usually go for.
+        </li>
+        <li>If needed, lightly oil your bowl. Then put the dough ball in.</li>
+        <li>
+          Put the bowl in your oven and turn on the light. This makes it
+          slightly warmer than room temperature. Leave it to rise for 90
+          minutes. It should at least double in size, if not more.
+        </li>
+        <li>Lightly oil the 4 containers, no more than 2 teaspoons each.</li>
+        <li>
+          Take the big dough ball out of the oven and lightly flour your work
+          surface if needed.
+        </li>
+        <li>Split it into 4 equal pieces using your scale to measure.</li>
+        <li>
+          Form each piece into a nice smooth ball by rolling it around on your
+          work surface, using your hand as a cup.
+        </li>
+        <li>
+          Put each ball in its own container and let them slow-rise in the
+          fridge overnight.
+        </li>
+        <li>
+          Done! You can safely keep the dough balls in the fridge for up to 6
+          days. The longer you keep them there, the tastier and fluffier it
+          gets!
+        </li>
+      </ol>
+      <p>
+        <strong>Freezing:</strong>&nbsp;This dough can be kept for up to 9
+        months in the freezer. Defrost by leaving it out to thaw for at least 4
+        hours.
+      </p>
     </section>
-    <section>
-      <h2>Sauce</h2>
-      <p>🏗️ Coming soon...</p>
+
+    <hr />
+
+    <section aria-labelledby="sauce">
+      <h2 id="sauce">
+        <a href="#sauce">Sauce</a>
+      </h2>
+      <p>Super quick to make and tasty! Enough for 8 large pizzas.</p>
+
+      <h3>Tools</h3>
+      <ul><li>Immersion blender + cup</li></ul>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li>1 can peeled tomatoes (400 g)</li>
+        <li>2 tablespoons olive oil</li>
+        <li>2 tablespoons dried oregano or dried basil</li>
+        <li>1 teaspoon salt</li>
+        <li>1 teaspoon ground peper</li>
+        <li>1 teaspoon red chili flakes</li>
+      </ul>
+
+      <h3>Steps</h3>
+      <ol>
+        <li>Pour all the ingredients into the cup.</li>
+        <li>Blend with short pulses until it is fully mixed.</li>
+        <li>
+          Done! Spread it thinly onto a pizza so you can still see the dough.
+        </li>
+      </ol>
+      <p>
+        <strong>Freezing:</strong>&nbsp;Pour the leftover sauce in a plastic
+        bag. Defrost by leaving the bag in lukewarm water or simply thaw
+        naturally.
+      </p>
     </section>
-    <section>
-      <h2>Baking</h2>
+
+    <hr />
+
+    <section aria-labelledby="baking">
+      <h2 id="baking">
+        <a href="#baking">Baking</a>
+      </h2>
       <p>🏗️ Coming soon...</p>
     </section>
   </RichText>
