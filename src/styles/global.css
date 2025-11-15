@@ -35,6 +35,9 @@
   --color-cyan-800: #20606a;
   --color-cyan-900: #1f515a;
   --color-cyan-950: #0f353d;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --default-transition-timing-function: var(--ease-out-expo);
 }
 
 @utility prose {

@@ -1,14 +1,18 @@
 ---
-import { Image } from "astro:assets";
-import avatar from "@/images/avatar037.png";
 import GitHubCat from "@/components/svg/GitHubCat.vue";
-import LinkedInSquare from "./svg/LinkedInSquare.vue";
+import LinkedInSquare from "@/components/svg/LinkedInSquare.vue";
+import avatar from "@/images/avatar037.png";
+import { Image } from "astro:assets";
 ---
 
 <header
   class="sticky top-0 mx-auto mb-2 w-full max-w-160 bg-gray-950/50 px-6 py-4 font-semibold text-white backdrop-blur-sm"
 >
-  <nav class="flex items-center justify-between gap-10">
+  <nav class="relative flex items-center justify-between gap-10">
+    <a
+      class="absolute -top-6 flex h-8 items-center rounded-full bg-pink-300 px-3 text-pink-900 underline opacity-0 transition-[opacity_top] duration-200 focus:top-0 focus:opacity-100 focus-visible:top-0 focus-visible:opacity-100"
+      href="#main-content">Skip to content</a
+    >
     <a
       class="group flex items-center gap-3 rounded-full bg-gray-950/80 pr-4"
       href="/"
@@ -24,14 +28,14 @@ import LinkedInSquare from "./svg/LinkedInSquare.vue";
         priority
       />
       <span
-        class="text-lg text-pink-300 group-hover:underline group-active:underline"
+        class="text-lg text-pink-300 group-hover:underline group-focus-visible:underline group-active:underline"
         >Home</span
       >
     </a>
     <ul class="flex list-none gap-4">
       <li>
         <a
-          class="flex min-h-6 items-center gap-2 hover:underline active:underline"
+          class="flex min-h-6 items-center gap-2 hover:underline focus-visible:underline active:underline"
           href="https://www.linkedin.com/in/joost-kersjes/"
           target="_blank"
           ><LinkedInSquare
@@ -42,7 +46,7 @@ import LinkedInSquare from "./svg/LinkedInSquare.vue";
       </li>
       <li>
         <a
-          class="flex min-h-6 items-center gap-2 hover:underline active:underline"
+          class="flex min-h-6 items-center gap-2 hover:underline focus-visible:underline active:underline"
           href="https://github.com/JoostKersjes"
           target="_blank"
           ><GitHubCat class="size-4.5 fill-white" aria-hidden="true" /><span
@@ -53,7 +57,8 @@ import LinkedInSquare from "./svg/LinkedInSquare.vue";
       <li>
         <a class="group flex gap-2 text-pink-300 sm:ml-2" href="/pizza/"
           ><span role="img" aria-label="Pizza">🍕</span><span
-            class="group-hover:underline group-active:underline">Recipe</span
+            class="group-hover:underline group-focus-visible:underline group-active:underline"
+            >Recipe</span
           ></a
         >
       </li>
