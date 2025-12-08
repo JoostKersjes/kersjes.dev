@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 ---
 
 <header
-  class="sticky top-0 mx-auto mb-2 w-full max-w-160 bg-gray-950/50 px-6 py-4 font-semibold text-white backdrop-blur-sm"
+  class="sticky top-0 z-10 mx-auto mb-2 w-full max-w-160 bg-gray-950/50 px-6 py-4 font-semibold text-white backdrop-blur-sm"
 >
   <nav class="relative flex items-center justify-between gap-10">
     <a
@@ -28,14 +28,14 @@ import { Image } from "astro:assets";
         priority
       />
       <span
-        class="text-lg text-pink-300 group-hover:underline group-focus-visible:underline group-active:underline"
+        class="text-lg text-pink-300 underline decoration-transparent underline-offset-2 transition-['text-decoration-color'] group-hover:decoration-[currentColor] group-focus-visible:decoration-[currentColor] active:decoration-[currentColor]"
         >Home</span
       >
     </a>
     <ul class="flex list-none gap-4">
       <li>
         <a
-          class="flex min-h-6 items-center gap-2 hover:underline focus-visible:underline active:underline"
+          class="flex min-h-6 items-center gap-2 underline decoration-transparent underline-offset-2 transition-['text-decoration-color'] hover:decoration-[currentColor] focus-visible:decoration-[currentColor] active:decoration-[currentColor]"
           href="https://www.linkedin.com/in/joost-kersjes/"
           target="_blank"
           ><LinkedInSquare
@@ -46,7 +46,7 @@ import { Image } from "astro:assets";
       </li>
       <li>
         <a
-          class="flex min-h-6 items-center gap-2 hover:underline focus-visible:underline active:underline"
+          class="flex min-h-6 items-center gap-2 underline decoration-transparent underline-offset-2 transition-['text-decoration-color'] hover:decoration-[currentColor] focus-visible:decoration-[currentColor] active:decoration-[currentColor]"
           href="https://github.com/JoostKersjes"
           target="_blank"
           ><GitHubCat class="size-4.5 fill-white" aria-hidden="true" /><span
@@ -57,7 +57,7 @@ import { Image } from "astro:assets";
       <li>
         <a class="group flex gap-2 text-pink-300 sm:ml-2" href="/pizza/"
           ><span role="img" aria-label="Pizza">🍕</span><span
-            class="group-hover:underline group-focus-visible:underline group-active:underline"
+            class="underline decoration-transparent underline-offset-2 transition-['text-decoration-color'] group-hover:decoration-[currentColor] group-focus-visible:decoration-[currentColor] group-active:decoration-[currentColor]"
             >Recipe</span
           ></a
         >
