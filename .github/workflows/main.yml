@@ -1,0 +1,38 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Deploy website on push
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Enable pnpm
+        run: corepack enable
+
+      - name: Build
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm run build
+
+      - name: Sync
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /public_html/
